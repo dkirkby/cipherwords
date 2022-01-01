@@ -8,25 +8,26 @@
 </head>
 <body style="font-family:Sans-Serif">
     <h1>CipherWords</h1>
-    <div id="observablehq-viewof-whoPrompt-42aee3b9"></div>
-    <div id="observablehq-seedPrompt-42aee3b9"></div>
-    <div id="observablehq-viewof-seed-42aee3b9"></div>
-    <div style="margin-bottom: 1cm"></div>
-    <div id="observablehq-canvas-42aee3b9"></div>
-    <div id="observablehq-AIclue-42aee3b9"></div>
-    <div id="observablehq-AIinfo-42aee3b9"></div>
+    <div id="observablehq-viewof-whoPrompt-f648d6f0"></div>
+    <div id="observablehq-seedPrompt-f648d6f0"></div>
+    <div id="observablehq-viewof-seedInput-f648d6f0"></div>
+    <div id="observablehq-viewof-reset-f648d6f0"></div>
+    <div id="observablehq-canvas-f648d6f0"></div>
+    <div id="observablehq-AIclue-f648d6f0"></div>
+    <div id="observablehq-AIinfo-f648d6f0"></div>
     <script type="module">
-        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-        import define from "https://api.observablehq.com/@dkirkby/cipher-words.js?v=3";
-        new Runtime().module(define, name => {
-        if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-42aee3b9"));
-        if (name === "viewof whoPrompt") return new Inspector(document.querySelector("#observablehq-viewof-whoPrompt-42aee3b9"));
-        if (name === "seedPrompt") return new Inspector(document.querySelector("#observablehq-seedPrompt-42aee3b9"));
-        if (name === "viewof seed") return new Inspector(document.querySelector("#observablehq-viewof-seed-42aee3b9"));
-        if (name === "AIclue") return new Inspector(document.querySelector("#observablehq-AIclue-42aee3b9"));
-        if (name === "AIinfo") return new Inspector(document.querySelector("#observablehq-AIinfo-42aee3b9"));
-        return ["viewof game","render","useAI","getClues","Game","revealAll"].includes(name);
-        });
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@dkirkby/cipher-words.js?v=3";
+    new Runtime().module(define, name => {
+      if (name === "viewof whoPrompt") return new Inspector(document.querySelector("#observablehq-viewof-whoPrompt-f648d6f0"));
+      if (name === "seedPrompt") return new Inspector(document.querySelector("#observablehq-seedPrompt-f648d6f0"));
+      if (name === "viewof seedInput") return new Inspector(document.querySelector("#observablehq-viewof-seedInput-f648d6f0"));
+      if (name === "viewof reset") return new Inspector(document.querySelector("#observablehq-viewof-reset-f648d6f0"));
+      if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-f648d6f0"));
+      if (name === "AIclue") return new Inspector(document.querySelector("#observablehq-AIclue-f648d6f0"));
+      if (name === "AIinfo") return new Inspector(document.querySelector("#observablehq-AIinfo-f648d6f0"));
+      return ["useAI","getClues","Game","viewof game","render","revealAll","viewof seed"].includes(name);
+    });
     </script>
 </body>
 </html>
